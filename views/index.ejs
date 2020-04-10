@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+<h1>
+	MOVIES
+</h1>
+
+<% movies.forEach(function(movie){ %>
+	<div class="ui main text container segment">
+		<h2>
+		<%= movie.title %>
+	  </h2>	
+	<img src="<%= movie.image %>" >
+	<p>
+		<%= movie.body.substring(0,100) %>	
+	</p>
+	<a href="/movies/<%= movie._id %>">More Info</a>
+	</div>
+	
+
+<% }) %>
+
+
+
+
+
+
+
+
+<%- include("partials/footer") %>

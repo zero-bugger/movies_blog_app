@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container segment">
+	<h2>
+		<%= movie.title %>
+	</h2>	
+	<img src="<%= movie.image %>" >
+	<p>
+		<%= movie.body %>	
+	</p>
+	
+	<form  action="/movies/<%=movie._id%>?_method=DELETE" method="POST">
+		<button class="ui red basic button">
+			DELETE 
+		</button>
+		
+	</form>
+	<br> <br>
+	<a href="/movies/<%= movie._id %>/edit" class="ui blue basic button">UPDATE</a>
+</div>
+	
+
+<%- include("partials/footer") %>
